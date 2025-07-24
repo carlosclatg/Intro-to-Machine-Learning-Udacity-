@@ -1,1 +1,32 @@
 
+✅ Diferencias entre sensibilidad y especificidad
+Son dos métricas muy importantes para evaluar pruebas diagnósticas, como un test de cáncer.
+
+Métrica	¿Qué mide?	Fórmula
+Sensibilidad (Recall)	La capacidad del test para detectar correctamente a los que sí tienen la enfermedad.	VP / (VP + FN)
+Especificidad	La capacidad del test para identificar correctamente a los que no tienen la enfermedad.	VN / (VN + FP)
+
+TP: Verdaderos positivos (enfermos bien diagnosticados)
+
+FN: Falsos negativos (enfermos mal diagnosticados como sanos)
+
+TN: Verdaderos negativos (sanos bien diagnosticados)
+
+FP: Falsos positivos (sanos mal diagnosticados como enfermos)
+
+
+EJEMPLO:
+
+He generado una simulación para 10 000 personas con una prevalencia del 1%, sensibilidad y especificidad del 90%.
+
+De las 100 personas enfermas, el test acierta en 90 (TP) y falla en 10 (FN).
+
+De las 9 900 sanas, el test incorrectamente da positivo en 990 (FP) y acierta en 8 910 (TN).
+
+La probabilidad de estar enfermo dado que el test es positivo (VPP) se calcula como:
+P(Enfermo∣Positivo)= TP/ TP + FP = 90 / 90 + 990 = 8.3% 
+
+Aunque la sensibilidad (P(Positivo|Enfermo)) es 90%, la probabilidad de estar enfermo dado un positivo baja a ≈8,3% porque hay muchos falsos positivos cuando la enfermedad es rara.
+
+Dado un cáncer la probabilidad de acertar es del 90%
+Pero dado un positivo la probabilidad de tener cáncer es del 8.3% (depende de la prevalencia)
